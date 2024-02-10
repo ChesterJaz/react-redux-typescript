@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
 import { ProdsTypesComponent } from "../types/types";
 
-
-
-
-const ProductComponent = ({ id, title, image, price, category}: ProdsTypesComponent) => {
-
-
+const ProductComponent = ({
+  id,
+  title,
+  image,
+  price,
+  category,
+}: ProdsTypesComponent) => {
   return (
-    <div className="four wide column" key={id}>
+    <div className="four wide column">
+      <Link to={`/product/${id}`}>
       <div className="ui link cards">
         <div className="card">
           <div className="image">
@@ -20,6 +23,7 @@ const ProductComponent = ({ id, title, image, price, category}: ProdsTypesCompon
           </div>
         </div>
       </div>
+      </Link>
     </div>
   );
 };
