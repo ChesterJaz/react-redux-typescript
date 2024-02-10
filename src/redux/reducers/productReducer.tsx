@@ -1,21 +1,21 @@
 import { ActionTypes } from "../constants/actionTypes";
 
-type Product = {
+export type Product = {
     id: number;
     title: string;
     category: string;
 }
 
-type State = {
+export type State = {
     products: Product[];
 }
 
-type Action = {
+export type Action = {
     type: string;
     payload? : any;
 }
 
-const initialState: State = {
+export const initialState: State = {
     products:[{
         id: 1,
         title: "Chester",

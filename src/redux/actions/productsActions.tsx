@@ -1,10 +1,7 @@
+import { Product } from "../../types/types"
 import { ActionTypes } from "../constants/actionTypes"
 
-interface Product {
-    id: string,
-    name: string;
-    price: number
-}
+
 
 export const setProducts = (products: Product[]) =>{
     return {
